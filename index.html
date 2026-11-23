@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ANKIT ELECTRONICS | Bordumsa</title>
+
+<style>
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f7fc;
+    color: #172b45;
+}
+
+header {
+    background: #092b5a;
+    color: white;
+    text-align: center;
+    padding: 25px 10px;
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: bold;
+    color: #ffcc33;
+}
+
+nav {
+    background: #1265bd;
+    padding: 14px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 12px;
+}
+
+.hero {
+    background: white;
+    text-align: center;
+    padding: 45px 15px;
+}
+
+.hero h2 {
+    color: #092b5a;
+    font-size: 29px;
+}
+
+.search {
+    display: block;
+    width: 85%;
+    max-width: 450px;
+    padding: 13px;
+    margin: 20px auto;
+    border: 1px solid #bbb;
+    border-radius: 8px;
+}
+
+.products {
+    padding: 25px 12px;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    background: white;
+    width: 245px;
+    margin: 12px;
+    padding: 17px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px #d5dce8;
+}
+
+.card img {
+    width: 100%;
+    height: 155px;
+    object-fit: contain;
+}
+
+.card h3 {
+    color: #092b5a;
+}
+
+.price {
+    color: #087d42;
+    font-weight: bold;
+}
+
+button {
+    background: #087d42;
+    color: white;
+    border: none;
+    padding: 12px 16px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #065e32;
+}
+
+footer {
+    background: #092b5a;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+.no-result {
+    display: none;
+    padding: 20px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">⚡ ANKIT ELECTRONICS</div>
+    <p>Your Trusted Electronics Store</p>
+    <p>Bordumsa, Goju Road</p>
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#products">Products</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section class="hero" id="home">
+    <h2>Welcome to ANKIT ELECTRONICS</h2>
+    <p>Mobile Phones | LED TVs | Smart TVs</p>
+    <p>Explore our product collection</p>
+    <button onclick="location.href='#products'">
+        View Products
+    </button>
+</section>
+
+<section class="products" id="products">
+
+<h2>Our Products</h2>
+
+<input
+    class="search"
+    type="text"
+    id="search"
+    placeholder="Search mobile, TV or brand..."
+    oninput="searchProducts()"
+>
+
+<div class="container" id="productList">
+
+<div class="card" data-name="vivo mobile smartphone">
+<img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=500"
+alt="Vivo mobile">
+<h3>Vivo Smartphone</h3>
+<p>Brand: Vivo</p>
+<p>Latest Models</p>
+<p class="price">Ask for Price</p>
+<button onclick="order('Vivo Smartphone')">WhatsApp Enquiry</button>
+</div>
+
+<div class="card" data-name="oppo mobile smartphone">
+<img src="https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=500"
+alt="OPPO mobile">
+<h3>OPPO Smartphone</h3>
+<p>Brand: OPPO</p>
+<p>Latest Models</p>
+<p class="price">Ask for Price</p>
+<button onclick="order('OPPO Smartphone')">WhatsApp Enquiry</button>
+</div>
+
+<div class="card" data-name="realme mobile smartphone">
+<img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=500"
+alt="Realme mobile">
+<h3>Realme Smartphone</h3>
+<p>Brand: Realme</p>
+<p>Latest Models</p>
+<p class="price">Ask for Price</p>
+<button onclick="order('Realme Smartphone')">WhatsApp Enquiry</button>
+</div>
+
+<div class="card" data-name="redmi mobile smartphone">
+<img src="https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=500"
+alt="Redmi mobile">
+<h3>Redmi Smartphone</h3>
+<p>Brand: Redmi</p>
+<p>Latest Models</p>
+<p class="price">Ask for Price</p>
+<button onclick="order('Redmi Smartphone')">WhatsApp Enquiry</button>
+</div>
+
+<div class="card" data-name="oneplus mobile smartphone">
+<img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=500"
+alt="OnePlus mobile">
+<h3>OnePlus Smartphone</h3>
+<p>Brand: OnePlus</p>
+<p>Latest Models</p>
+<p class="price">Ask for Price</p>
+<button onclick="order('OnePlus Smartphone')">WhatsApp Enquiry</button>
+</div>
+
+<div class="card" data-name="lg television tv">
+<img src="https://images.unsplash.com/photo-1593305841991-05c297ba4575?w=500"
+alt="LG television">
+<h3>LG Smart LED TV</h3>
+<p>Brand: LG</p>
+<p>Smart Television</p>
+<p class="price">Ask for Price</p>
+<button onclick="order('LG Smart LED TV')">WhatsApp Enquiry</button>
+</div>
+
+<div class="card" data-name="mi tv television">
+<img src="https://images.unsplash.com/photo-1593305841991-05c297ba4575?w=500"
+alt="Mi TV">
+<h3>Mi Smart TV</h3>
+<p>Brand: Mi TV</p>
+<p>Smart Television</p>
+<p class="price">Ask for Price</p>
+<button onclick="order('Mi Smart TV')">WhatsApp Enquiry</button>
+</div>
+
+<div class="card" data-name="sony television tv">
+<img src="https://images.unsplash.com/photo-1593305841991-05c297ba4575?w=500"
+alt="Sony television">
+<h3>Sony Smart TV</h3>
+<p>Brand: Sony</p>
+<p>Smart Television</p>
+<p class="price">Ask for Price</p>
+<button onclick="order('Sony Smart TV')">WhatsApp Enquiry</button>
+</div>
+
+</div>
+
+<p class="no-result" id="noResult">
+No products found.
+</p>
+
+</section>
+
+<footer id="contact">
+<h2>ANKIT ELECTRONICS</h2>
+<p>📍 Bordumsa, Goju Road</p>
+<p>Mobile Phones | LED TVs</p>
+<p>Contact us for product details</p>
+<button onclick="order('General Enquiry')">
+Contact on WhatsApp
+</button>
+<p>© 2026 ANKIT ELECTRONICS</p>
+</footer>
+
+<script>
+
+function order(product) {
+
+    let phone = "919365269911";
+
+    let message =
+    "Hello ANKIT ELECTRONICS! I want to know the price and details of "
+    + product;
+
+    let url = "https://wa.me/" + phone +
+    "?text=" + encodeURIComponent(message);
+
+    window.open(url, "_blank");
+}
+
+function searchProducts() {
+
+    let input = document.getElementById("search")
+    .value.toLowerCase();
+
+    let cards = document.querySelectorAll(".card");
+
+    let found = 0;
+
+    cards.forEach(function(card) {
+
+        let name = card.getAttribute("data-name");
+
+        if (name.includes(input)) {
+            card.style.display = "block";
+            found++;
+        } else {
+            card.style.display = "none";
+        }
+
+    });
+
+    document.getElementById("noResult").style.display =
+    found === 0 ? "block" : "none";
+}
+
+</script>
+
+</body>
+</html>
